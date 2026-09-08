@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block extra_head_base %}
+  {% include "venobox/venobox_css.html" %}
+  {% block extra_head %}
+  {% endblock extra_head %}
+{% endblock extra_head_base %}
+{% block content_outer %}
+  <div class="{% block content_class %}{% endblock %}">
+    {% block content_title_outer %}
+      <h1 class="{% block content_title_class %}{% endblock %}">
+        {% block content_title %}
+        {% endblock content_title %}
+      </h1>
+    {% endblock content_title_outer %}
+    {% block content %}
+    {% endblock content %}
+  </div>
+{% endblock content_outer %}
+{% block extra_body_base %}
+  {% include "venobox/venobox_js.html" %}
+  {% block extra_body %}
+  {% endblock extra_body %}
+{% endblock extra_body_base %}

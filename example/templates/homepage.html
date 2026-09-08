@@ -1,0 +1,19 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}
+  {% trans "Example" %}
+{% endblock %}
+{% block content_title %}
+  {% trans "Venobox example" %}
+{% endblock %}
+{% block content %}
+  <a data-vbtype="ajax"
+     data-maxwidth="800px"
+     data-border="20px"
+     href="{% url 'remote.html' %}"
+     class="venobox">{% trans "Click here" %}</a> or  <a data-gall="images"
+     href="https://www.reactiongifs.com/r/mgc.gif"
+     class="venobox">{% trans "here" %}</a>
+{% endblock %}

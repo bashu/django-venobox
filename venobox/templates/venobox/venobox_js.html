@@ -1,0 +1,10 @@
+{% load static %}
+
+<script src="{% static "venobox/js/venobox.min.js" %}?2.2.0"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    new VenoBox({
+      selector: ".venobox"
+    });
+  });
+</script>
