@@ -2,9 +2,13 @@ from functools import partial
 
 
 def is_ajax(request):
-    # VenoBox sends no X-Requested-With header, so the browser-set Sec-Fetch-Dest is checked as well.
+    # VenoBox sends no X-Requested-With header,
+    # so the browser-set Sec-Fetch-Dest is checked as well.
     headers = request.headers
-    return headers.get("X-Requested-With") == "XMLHttpRequest" or headers.get("Sec-Fetch-Dest") == "empty"
+    return (
+        headers.get("X-Requested-With") == "XMLHttpRequest"
+        or headers.get("Sec-Fetch-Dest") == "empty"
+    )
 
 
 class AjaxMiddleware:
