@@ -3,17 +3,17 @@
 {% load i18n %}
 
 {% block head_title %}
-  {% trans "Example" %}
+  {% translate "Example" %}
 {% endblock %}
 {% block content_title %}
-  {% trans "Venobox example" %}
+  {% translate "Venobox example" %}
 {% endblock %}
 {% block content %}
   <a data-vbtype="ajax"
      data-maxwidth="800px"
      data-border="20px"
      href="{% url 'remote.html' %}"
-     class="venobox">{% trans "Click here" %}</a> or  <a data-gall="images"
-     href="https://www.reactiongifs.com/r/mgc.gif"
-     class="venobox">{% trans "here" %}</a>
+     class="venobox">{% translate "Click here" %}</a> or  <a data-gall="images"
+                                                         href="https://www.reactiongifs.com/r/mgc.gif"
+                                                         class="venobox">{% translate "here" %}</a>
 {% endblock %}
