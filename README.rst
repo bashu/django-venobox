@@ -52,7 +52,19 @@ Be sure you have the ``django.template.context_processors.request`` processor
         },
     ]
 
-and just include ``venobox`` templates
+add the middleware that restores ``request.is_ajax()``, removed in Django 4.0
+
+.. code-block:: python
+
+    MIDDLEWARE += [
+        'venobox.middleware.AjaxMiddleware',
+    ]
+
+It treats a request as ajax when it has ``X-Requested-With: XMLHttpRequest`` or
+``Sec-Fetch-Dest: empty``. VenoBox does not send the former, and browsers send the latter
+only over HTTPS and on ``localhost``; otherwise ``request.is_ajax()`` is false.
+
+Then just include ``venobox`` templates
 
 .. code-block:: html+django
 
