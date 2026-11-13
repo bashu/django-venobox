@@ -2,11 +2,12 @@
 
 [Full report](https://htmlpreview.github.io/?https://github.com/bashu/django-venobox/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
-| Name                    |    Stmts |     Miss |    Cover |   Missing |
-|------------------------ | -------: | -------: | -------: | --------: |
-| venobox/\_\_init\_\_.py |        0 |        0 |     100% |           |
-| venobox/models.py       |        0 |        0 |     100% |           |
-| **TOTAL**               |    **0** |    **0** | **100%** |           |
+| Name                        |    Stmts |     Miss |    Cover |   Missing |
+|---------------------------- | -------: | -------: | -------: | --------: |
+| src/venobox/\_\_init\_\_.py |        0 |        0 |     100% |           |
+| src/venobox/middleware.py   |       10 |        0 |     100% |           |
+| src/venobox/models.py       |        0 |        0 |     100% |           |
+| **TOTAL**                   |   **10** |    **0** | **100%** |           |
 
 
 ## Setup coverage badge
